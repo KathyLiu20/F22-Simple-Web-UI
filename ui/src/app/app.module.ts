@@ -15,6 +15,8 @@ import { NavtestComponent } from './navtest/navtest.component';
 import {NgbNavModule} from "@ng-bootstrap/ng-bootstrap";
 import { ColumbiaAllComponent } from './columbia-all/columbia-all.component'
 import { ImdbTitleComponent } from './imdb-title/imdb-title.component';
+import {LoginComponent} from "./login-page/login.component";
+import {SignupComponent} from "./signup-page/signup.component";
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { ImdbTitleComponent } from './imdb-title/imdb-title.component';
     SnuffleComponent,
     NavtestComponent,
     ColumbiaAllComponent,
-    ImdbTitleComponent
+    ImdbTitleComponent,
+    LoginComponent,
+    SignupComponent
   ],
     imports: [
         BrowserModule,

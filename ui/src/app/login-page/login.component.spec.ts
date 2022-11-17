@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoginComponent } from './imdbartist.component'; // ColumbiaStudentComponent
+import { ColumbiaStudentComponent } from './imdbartist.component';
 
 describe('ImdbartistComponent', () => {
   let component: LoginComponent;
