@@ -42,4 +42,8 @@ export class ColumbiaStudentServiceService {
     theUrl = this.getStudentServiceUrl() + studentUni;
     return this.http.get<ColumbiaStudent>(theUrl);
   }
+
+  insertUser(username, email, password): void {
+    // insert api??
+  }
 }

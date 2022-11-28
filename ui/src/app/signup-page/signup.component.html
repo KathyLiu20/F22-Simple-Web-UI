@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="container py-5">
   <div class="row" id="login-container">
     <div class="col-4"></div>
@@ -9,19 +10,19 @@
           <div class="col-2"></div>
         </div>
         <div class="row pt-3 pb-2 px-5" id="email-box">
-          <input type="text" class="form-control" placeholder="Email" [(ngModel)]="studentUni">
+          <input type="text" class="form-control" placeholder="Email" [(ngModel)]="email">
         </div>
         <div class="row py-2 px-5" id="username-box">
-          <input type="text" class="form-control" placeholder="Username" [(ngModel)]="studentUni">
+          <input type="text" class="form-control" placeholder="Username" [(ngModel)]="username">
         </div>
         <div class="row py-2 px-5" id="password-box">
-          <input type="text" class="form-control" placeholder="Password" [(ngModel)]="studentUni">
+          <input type="text" class="form-control" placeholder="Password" [(ngModel)]="password">
         </div>
         <div class="row pt-5 px-5" id="agreement-text">
           <p>By signing up, you agree to our Terms, Privacy Policy and Cookies Policy.</p>
         </div>
         <div class="row py-2 px-5 justify-content-center" id="submit-box">
-          <button type="button" class="btn btn-primary px-4">Sign Up</button>
+          <button type="button" (click)="onSignUp()" class="btn btn-primary px-4">Sign Up</button>
         </div>
         <div class="row py-5 px-5">
         </div>

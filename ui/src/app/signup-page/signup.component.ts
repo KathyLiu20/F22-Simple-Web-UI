@@ -16,8 +16,9 @@ export class SignupComponent implements OnInit {
   studentService: ColumbiaStudentServiceService;
   studentsInfo: ColumbiaStudent[];
   // login
-  //username: string;
-  //password: string;
+  email: string;
+  username: string;
+  password: string;
 
   constructor(studentService: ColumbiaStudentServiceService) {
     this.toggleStudent = false;
@@ -26,8 +27,9 @@ export class SignupComponent implements OnInit {
     this.studentService = studentService;
     this.studentsInfo = undefined;
     // signup
-    //this.username =  undefined;
-    //this.password = undefined;
+    this.email = undefined;
+    this.username =  undefined;
+    this.password = undefined;
   }
 
   ngOnInit(): void {
@@ -45,19 +47,13 @@ export class SignupComponent implements OnInit {
   }
 
 
-  onSomethingInput(e: Event) : void {
-    // console.log("Input = ", (<HTMLInputElement> e.target).value);
-    this.studentUni = (<HTMLInputElement> e.target).value;
-    if (this.studentUni.length > 2) {
-      this.studentService.getStudents(this.studentUni)
-        .subscribe((data) => this.setStudentInfo(data));
-    }
-  }
-
-  onLookup(): void {
-    if (this.studentUni.length > 3) {
-      this.studentService.getStudents(this.studentUni)
-        .subscribe((data) => this.setStudentInfo(data));
+  onSignUp(): void {
+    // check if input username or email has existed in database
+    // if not, insert new
+    // check if username, email is valid - how to check email xxx@xxx.xx
+    if (this.username.length > 3) {
+      // insert api???
+      this.studentService.insertUser(this.username, this.email, this.password);
     }
   }
 

@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="container py-5">
   <div class="row" id="login-container">
     <div class="col-4"></div>
@@ -15,7 +16,7 @@
           <input type="text" class="form-control" placeholder="Password" [(ngModel)]="password">
         </div>
         <div class="row py-3 px-5 justify-content-center" id="submit-box">
-          <button type="button" class="btn btn-primary px-4">Log In</button>
+          <button type="button" (click)="onLogin()" class="btn btn-primary px-4">Log In</button>
         </div>
         <div class="row py-3 px-5">
           <div class="col-5"><hr/></div>
@@ -30,6 +31,13 @@
       </div>
     </div>
     <div class="col-4"></div>
+  </div>
+
+  <div class="row pt-5">
+    <p>{{message}}</p>
+    <div *ngFor="let p of studentsInfo;">
+      <p>{{p.guid}}</p>
+     </div>
   </div>
 
 

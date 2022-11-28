@@ -17,7 +17,7 @@ import { ColumbiaAllComponent } from './columbia-all/columbia-all.component'
 import { ImdbTitleComponent } from './imdb-title/imdb-title.component';
 import {LoginComponent} from "./login-page/login.component";
 import {SignupComponent} from "./signup-page/signup.component";
-
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,8 @@ import {SignupComponent} from "./signup-page/signup.component";
         HttpClientModule,
         FormsModule,
         ReactiveFormsModule,
-        NgbNavModule
+        NgbNavModule,
+      AppRoutingModule,
     ],
   providers: [
     NavbarComponent
